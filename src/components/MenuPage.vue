@@ -1,11 +1,12 @@
 <script setup>
-import { ref } from 'vue'
-    import WelcomeCard from '@/components/WelcomeCard.vue'
-    import WeatherCard from '@/components/WeatherCard.vue'
-    import WeatherMainCard from './WeatherMainCard.vue';
-    import TimeCard from './TimeCard.vue';
+  import { ref } from 'vue'
+  import WelcomeCard from '@/components/WelcomeCard.vue'
+  import WeatherCard from '@/components/WeatherCard.vue'
+  import WeatherMainCard from './WeatherMainCard.vue';
+  import TimeCard from './TimeCard.vue';
+  import PictureCard from './PictureCard.vue';
 
-    const showDetailedWeather = ref(false);
+  const showDetailedWeather = ref(false);
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import { ref } from 'vue'
             <WeatherCard @open="showDetailedWeather = true" />
             <WeatherMainCard v-if="showDetailedWeather" @close="showDetailedWeather = false"/>
             <TimeCard />
+            <PictureCard />
         </div>
     </div>
 </template>
@@ -47,6 +49,8 @@ import { ref } from 'vue'
         mask-repeat: no-repeat;
         mask-position: center;
         animation: fadeIn 2s ease;
+        position: sticky;
+        top: 0;
     }
 
 
