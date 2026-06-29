@@ -5,6 +5,7 @@
   import WeatherMainCard from './WeatherMainCard.vue';
   import TimeCard from './TimeCard.vue';
   import PictureCard from './PictureCard.vue';
+  import PictureDetailCard from './PictureDetailCard.vue';
 
   const showDetailedWeather = ref(false);
 </script>
@@ -18,6 +19,7 @@
             <WeatherMainCard v-if="showDetailedWeather" @close="showDetailedWeather = false"/>
             <TimeCard />
             <PictureCard />
+            <PictureDetailCard />
         </div>
     </div>
 </template>

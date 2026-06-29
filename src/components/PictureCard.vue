@@ -16,8 +16,10 @@ function switchImage() {
   imgRef.value.classList.add('fade-out')
   setTimeout(() => {
     picture.value = getRandomImage()
-    imgRef.value.classList.remove('fade-out')
-  }, 200)
+    requestAnimationFrame(() => {
+          imgRef.value.classList.remove('fade-out')
+    })
+  }, 400)
 }
 
 onMounted(() => {
@@ -61,19 +63,23 @@ onUnmounted(() => {
     overflow: hidden;
     border-radius: 24px 24px 24px 24px;
   }
+
   .picture-image img {
     aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: center;
     width: 100%;
     height: 100%;
-    box-shadow: inset 10px 4px 3px 10px rgba(0, 0, 0, 0.6);
+
     animation: fadeUp 0.3s ease forwards;
+    transition: opacity 0.4s ease;
+    opacity: 1;
   }
 
   img.fade-out {
-    animation: fadeOut 0.3s ease forwards;
+    opacity: 0;
   }
+
   .picture-content p {
     color:rgba(183, 80, 118, 0.77);
     font-weight: 500;
