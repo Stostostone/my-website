@@ -2,39 +2,47 @@
 
   const imagesModules = import.meta.glob('../assets/wallpapers/*.{jpg,png,jpeg}', {eager:true, import:'default'})
   const images = Object.values(imagesModules)
-  const emits = defineEmits(['close']);
+  const emit = defineEmits(['close']);
 
   function closePictureDetails() {
-    emits('close')
+    emit('close')
   }
 
 </script>
 
 <template>
-  <dev class="picture-detail-card card" @click = "closePictureDetails()">
-    <dev class="picture-detail grid-item" >
-      <img :src="img" alt="wallpaper" v-for="(img,index) in images" :key="index">
-    </dev>
-    <dev class="picture-desc">
+  <div class="overlay" @click.self = "closePictureDetails()">
+    <div class="picture-detail-card card" >
+      <div class="picture-detail grid-container" >
+        <img :src="img" alt="wallpaper" v-for="(img,index) in images" :key="index">
+      </div>
+      <div class="picture-desc">
+        <p>123</p>
+      </div>
+    </div>
+  </div>
 
-    </dev>
-  </dev>
 </template>
 
 <style>
 
-  .grid-item{
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    border-radius: 24px;
+  .picture-detail-card.card {
+    transform: none;
+    max-height: fit-content;
+    overflow-y: auto;
+  }
+
+  .grid-container{
+    display: grid;
+
     grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+    gap: 5px;
+
   }
 
-  .grid-item img {
+  .grid-container img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    margin: 3px;
+    object-fit: cover;
+    border-radius: 7px;
   }
-
 </style>

@@ -6,6 +6,7 @@ const picture = ref('');
 const imagesModules = import.meta.glob('../assets/wallpapers/*.{jpg,jpeg,png}', { eager: true, import: 'default' });
 const images = Object.values(imagesModules)
 const imgRef = ref(null)
+const emit = defineEmits(['open'])
 
 function getRandomImage() {
   const randomIndex = Math.floor(Math.random() * images.length);
@@ -22,6 +23,10 @@ function switchImage() {
   }, 400)
 }
 
+function openDetail() {
+  emit('open')
+}
+
 onMounted(() => {
   picture.value = getRandomImage();
   timer = setInterval(switchImage, 5000);
@@ -34,7 +39,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="picture-card card">
+    <div class="picture-card card" @click="openDetail()">
         <div class="picture-image">
             <img ref="imgRef" class="picture" :src="picture" alt="Picture">
 

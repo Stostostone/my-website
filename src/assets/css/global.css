@@ -63,6 +63,29 @@ p, a, h1, h2, h3, h4, h5, h6 {
   max-height: fit-content;
 }
 
+  .overlay {
+    content: '';
+    position: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    inset: 0;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .overlay.fade-out {
+    animation: fadeOut 0.3s ease 0.2s forwards;
+  }
+
+  .weather-main-card.fade-out {
+    animation: fadeOutDown 0.2s ease forwards;
+  }
+
 .button {
   background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 4px 6px -1px rgba(91, 91, 91, 0.1), 0 2px 4px -2px rgba(115, 115, 115, 0.1);

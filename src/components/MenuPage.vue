@@ -8,6 +8,7 @@
   import PictureDetailCard from './PictureDetailCard.vue';
 
   const showDetailedWeather = ref(false);
+  const showDetailedPicture = ref(false)
 </script>
 
 <template>
@@ -18,8 +19,8 @@
             <WeatherCard @open="showDetailedWeather = true" />
             <WeatherMainCard v-if="showDetailedWeather" @close="showDetailedWeather = false"/>
             <TimeCard />
-            <PictureCard />
-            <PictureDetailCard />
+            <PictureCard @open="showDetailedPicture = true"/>
+            <PictureDetailCard v-if="showDetailedPicture" @close="showDetailedPicture = false"/>
         </div>
     </div>
 </template>
