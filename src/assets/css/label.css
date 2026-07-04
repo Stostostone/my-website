@@ -1,0 +1,13 @@
+.label {
+  display: flex;
+  margin: 0 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 2px 14px 2px 14px;
+  box-shadow: 0px 2px 4px 6px rgba(228, 228, 228, 0.06);
+  flex-direction: row;
+  align-items: left;
+  max-width: fit-content;
+  max-height: fit-content;
+}

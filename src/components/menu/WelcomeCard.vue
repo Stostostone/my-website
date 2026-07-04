@@ -12,7 +12,7 @@ const steam = ref("https://store.steampowered.com")
         <div class="welcome-content">
             <h2>欢迎来到石头屋!</h2>
             <p>卑微石头手搓的小屋</p>
-            <p class="lable">Stone house</p>
+            <p class="label">Stone house</p>
         </div>
         <div class = "nav-link-button">
             <a class="link-button" href= ${github} target="_blank" rel="noopener noreferrer">
@@ -62,7 +62,7 @@ const steam = ref("https://store.steampowered.com")
         overflow: hidden;
         background: #72013d4e;
     }
-    .lable {
+    .label {
         transform: translateY(5px);
         padding: 2px 14px 2px 14px;
     }

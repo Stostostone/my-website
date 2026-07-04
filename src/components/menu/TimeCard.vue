@@ -37,7 +37,7 @@
         <p id="time">{{ new Date().toLocaleTimeString() }}</p>
         <p id="date">{{ new Date().toLocaleDateString() }}</p>
     </div>
-      <div class="time-content lable">
+      <div class="time-content label">
         <p>{{ suggestion }}</p>
       </div>
   </div>
