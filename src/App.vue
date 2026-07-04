@@ -1,6 +1,6 @@
 <script setup>
-import AppHeader from './components/AppHeader.vue'
-import MenuPage from './components/MenuPage.vue'
+import AppHeader from '@/components/layout/AppHeader.vue';
+import MenuPage from '@/components/layout/MenuPage.vue';
 </script>
 
 <template>

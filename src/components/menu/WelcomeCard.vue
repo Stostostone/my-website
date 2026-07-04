@@ -16,16 +16,16 @@ const steam = ref("https://store.steampowered.com")
         </div>
         <div class = "nav-link-button">
             <a class="link-button" href= ${github} target="_blank" rel="noopener noreferrer">
-                <img src="../assets/icons/link/github.png" alt="Github">
+                <img src="@/assets/icons/link/github.png" alt="Github">
             </a>
             <a class="link-button" href="https://email.com" target="_blank" rel="noopener noreferrer">
-                <img src="../assets/icons/link/email.png" alt="Email">
+                <img src="@/assets/icons/link/email.png" alt="Email">
             </a>
             <a class="link-button" href="https://www.bilibili.com" target="_blank" rel="noopener noreferrer">
-                <img src="../assets/icons/link/bilibili.png" alt="Bilibili">
+                <img src="@/assets/icons/link/bilibili.png" alt="Bilibili">
             </a>
             <a class="link-button" href="https://store.steampowered.com" target="_blank" rel="noopener noreferrer">
-                <img src="../assets/icons/link/steam.png" alt="Steam">
+                <img src="@/assets/icons/link/steam.png" alt="Steam">
             </a>
         </div>
     </div>

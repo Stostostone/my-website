@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 let timer = null;
 const picture = ref('');
-const imagesModules = import.meta.glob('../assets/wallpapers/*.{jpg,jpeg,png}', { eager: true, import: 'default' });
+const imagesModules = import.meta.glob('@/assets/wallpapers/*.{jpg,jpeg,png}', { eager: true, import: 'default' });
 const images = Object.values(imagesModules)
 const imgRef = ref(null)
 const emit = defineEmits(['open'])

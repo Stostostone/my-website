@@ -1,7 +1,7 @@
 <script setup>
     import { ref } from 'vue'
 
-    const weatherIcon = ref('../assets/icons/weather/sunny.png');
+    const weatherIcon = ref('@/assets/icons/weather/sunny.png');
     const weatherDesc = ref('');
     const temperature = ref(20)
     const city = ref('YongKang')
@@ -18,7 +18,7 @@
     const emits = defineEmits(['open'])
 
     function getWeather() {
-        fetch(`https://wttr.in/${city.value}?format=j1&lang=en`, {
+        fetch(`https://wttr.in/${city.value}?format=j1`, {
             method: 'GET'
         })
         .then(r => r.json())
@@ -27,7 +27,7 @@
             temperature.value = data.current_condition[0].temp_C;
             weatherDesc.value = desc;
             const key = Object.keys(iconMap).find(k => desc.includes(k))|| 'Sunny';
-            weatherIcon.value = new URL(`../assets/icons/weather/${iconMap[key]}.png`, import.meta.url).href;
+            weatherIcon.value = new URL(`/src/assets/icons/weather/${iconMap[key]}.png`, import.meta.url).href;
         });
     }
     function openWeatherMainCard() {

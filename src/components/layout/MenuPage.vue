@@ -1,11 +1,11 @@
 <script setup>
   import { ref } from 'vue'
-  import WelcomeCard from '@/components/WelcomeCard.vue'
-  import WeatherCard from '@/components/WeatherCard.vue'
-  import WeatherMainCard from './WeatherMainCard.vue';
-  import TimeCard from './TimeCard.vue';
-  import PictureCard from './PictureCard.vue';
-  import PictureDetailCard from './PictureDetailCard.vue';
+  import WelcomeCard from '@/components/menu/WelcomeCard.vue'
+  import WeatherCard from '@/components/menu/weather/WeatherCard.vue'
+  import WeatherMainCard from '@/components/menu/weather/WeatherMainCard.vue';
+  import TimeCard from '@/components/menu/TimeCard.vue';
+  import PictureCard from '@/components/menu/picture/PictureCard.vue';
+  import PictureDetailCard from '@/components/menu/picture/PictureDetailCard.vue';
 
   const showDetailedWeather = ref(false);
   const showDetailedPicture = ref(false)
@@ -42,7 +42,7 @@
         margin: -17px;
         width: calc(100% + 34px);
         aspect-ratio: 16 / 9;
-        background: url('../assets/backgrounds/MIKU.jpeg') no-repeat center center;
+        background: url('@/assets/backgrounds/MIKU.jpeg') no-repeat center center;
         overflow: hidden;
         background-size: cover;
         transform: translateY(-10px);

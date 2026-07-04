@@ -1,6 +1,6 @@
 <script setup>
 
-  const imagesModules = import.meta.glob('../assets/wallpapers/*.{jpg,png,jpeg}', {eager:true, import:'default'})
+  const imagesModules = import.meta.glob('@/assets/wallpapers/*.{jpg,png,jpeg}', {eager:true, import:'default'})
   const images = Object.values(imagesModules)
   const emit = defineEmits(['close']);
 
