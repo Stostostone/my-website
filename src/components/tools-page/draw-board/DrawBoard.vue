@@ -91,10 +91,10 @@ onMounted(() => {
         ref="canvasRef"
       ></canvas>
       <div class="toolbar">
-        <button class="tool-button button">画笔</button>
-        <button class="tool-button button" @click="eraser">橡皮擦</button>
-        <button class="tool-button button" @click="clearBoard()">清空</button>
-        <button class="tool-button button">保存</button>
+        <button class="draw-button button">画笔</button>
+        <button class="eraser-button button" @click="eraser">橡皮擦</button>
+        <button class="clear-button button" @click="clearBoard()">清空</button>
+        <button class="save-button button">保存</button>
       </div>
     </div>
   </div>
@@ -168,5 +168,24 @@ onMounted(() => {
   gap: 10px;
   padding: 10px;
   border-radius: 24px;
+}
+
+.button {
+  animation: fadeInUp 0.3s ease var(--delay) backwards;
+}
+
+.draw-button {
+  --delay:0s;
+}
+
+.eraser-button {
+  --delay:0.1s;
+}
+
+.clear-button {
+  --delay:0.2s;
+}
+.save-button {
+  --delay:0.3s;
 }
 </style>
