@@ -8,13 +8,19 @@
   padding: 14px 24px 14px 24px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   flex-direction: column;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    backdrop-filter 0.3s ease,
+    transform 0.3s ease;
   animation: popInUp 0.6s ease;
 }
 
-.card:hover {
-  transform: scale(1.02) translateY(-1px);
-  backdrop-filter: blur(3px);
-  background-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 8px 12px -1px rgba(0, 0, 0, 0.1);
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: scale(1.02) translateY(-1px);
+    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 12px -1px rgba(0, 0, 0, 0.1);
+  }
 }

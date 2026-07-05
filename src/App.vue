@@ -2,6 +2,7 @@
 import AppHeader from '@/components/layout/AppHeader.vue';
 import MenuPage from '@/components/layout/MenuPage.vue';
 import LoadingPage from '@/components/loading/LoadingPage.vue';
+import ToolsPage from './components/layout/ToolsPage.vue';
 </script>
 
 <template>
@@ -9,8 +10,12 @@ import LoadingPage from '@/components/loading/LoadingPage.vue';
     <AppHeader />
     <MenuPage />
   </div> -->
-  <div class="app-layout">
+  <!-- <div class="app-layout">
     <LoadingPage />
+  </div> -->
+  <div class="app-layout">
+    <AppHeader />
+    <ToolsPage />
   </div>
 </template>
 
