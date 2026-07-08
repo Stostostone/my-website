@@ -4,7 +4,10 @@
   const emit = defineEmits(['open']);
 
   function openDrawBoard() {
-    emit('open');
+    setTimeout(() => {
+      emit('open');
+    },50)
+
   }
 
 </script>

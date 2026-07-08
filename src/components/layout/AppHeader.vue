@@ -11,7 +11,7 @@
 <template>
   <header class="header">
     <div class="header-content">
-      <h1 @click="handleNavigationClick('menu')">石头屋</h1>
+      <h3 @click="handleNavigationClick('menu')">石头屋 | stone house</h3>
     </div>
     <ul class="switch-button">
       <li class="menu-button button" @click="handleNavigationClick('menu')">主页</li>
@@ -26,9 +26,10 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(10px);
-    padding: 20px;
+    padding: 14px;
     position: sticky;
     top: 0;
     left: 0;
@@ -41,6 +42,7 @@
     flex: 1;
     margin-right: auto;
     animation: fadeIn 0.4s ease;
+
   }
 
   .switch-button {
@@ -50,7 +52,7 @@
     flex-direction: row;
     align-items: center;
     list-style: none;
-
+    font-size: 12px;
   }
 
 

@@ -1,7 +1,7 @@
 .overlay {
   position: fixed;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(15px);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
   justify-content: center;
   z-index: 100;
   animation: fadeIn 0.3s ease;
-  inset: 80px 0 0 0;
+  inset: 60px 0 0 0;
 }
 
 .overlay.fade-out {
