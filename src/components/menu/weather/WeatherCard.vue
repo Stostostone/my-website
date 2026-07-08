@@ -50,7 +50,7 @@
     </div>
 </template>
 
-<style>
+<style scroped>
     .weather-card {
         display: flex;
         flex-direction: row;

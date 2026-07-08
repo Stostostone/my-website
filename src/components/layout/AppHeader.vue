@@ -1,36 +1,33 @@
 <script setup>
     import { ref } from 'vue'
 
-    const headerTitle = ref('石头屋')
+    const emit = Object['menuSelect']
 
-    function updateHeaderTitle(newTitle) {
-        headerTitle.value = newTitle
+    function handleMenuClick() {
+      emit('handleMenuClick');
     }
-    function changePage() {
-      
+    function handleToolsClick() {
+      emit('handleToolsClick');
+    }
+    function handleAboutClick() {
+      emit('handleAboutClick');
     }
 
 </script>
 <template>
   <header class="header">
     <div class="header-content">
-      <h1>{{ headerTitle }}</h1>
+      <h1 @click="menuSelect()">石头屋</h1>
     </div>
-    <div class="switch-button">
-      <button class="menu-button button">
-        主页
-      </button>
-      <button class="tools-button button">
-        工具箱
-      </button>
-      <button class="about-button button">
-        关于我
-      </button>
-    </div>
+    <ul class="switch-button">
+      <li class="menu-button button" @click="handleMenuClick()">主页</li>
+      <li class="tools-button button" @click="handleToolsClick()">工具箱</li>
+      <li class="about-button button" @click="handleAboutClick()">关于我</li>
+    </ul>
   </header>
 </template>
 
-<style>
+<style scroped>
   .header {
     display: flex;
     justify-content: space-between;
@@ -58,6 +55,8 @@
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+    list-style: none;
+
   }
 
 

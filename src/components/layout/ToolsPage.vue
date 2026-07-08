@@ -15,7 +15,7 @@ const showDrawBoard = ref(false);
 </template>
 
 
-<style>
+<style scroped>
   .tools-page {
     display: flex;
     flex-direction: column;

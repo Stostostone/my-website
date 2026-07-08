@@ -25,7 +25,7 @@
     </div>
 </template>
 
-<style>
+<style scroped>
     .menu-page {
         padding: 17px;
         display: flex;

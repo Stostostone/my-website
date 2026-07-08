@@ -14,7 +14,7 @@ import WaterWave from '../WaterWave.vue';
   </div>
 </template>
 
-<style>
+<style scroped>
   .loading-page {
     display: grid;
     place-items: center;

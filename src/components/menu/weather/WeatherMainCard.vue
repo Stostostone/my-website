@@ -101,14 +101,13 @@
 
 </template>
 
-<style>
+<style scroped>
   .weather-main-card {
     position: relative;
 
   }
 
-  .overlay {
-    content: '';
+  /* .overlay {
     position: fixed;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
@@ -124,7 +123,7 @@
 
   .overlay.fade-out {
     animation: fadeOut 0.3s ease 0.2s forwards;
-  }
+  } */
 
   .weather-main-card.fade-out {
     animation: fadeOutDown 0.2s ease forwards;

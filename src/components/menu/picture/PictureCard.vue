@@ -50,7 +50,7 @@ onUnmounted(() => {
     </div>
 </template>
 
-<style>
+<style scroped>
   .picture-card {
   position: relative;
   padding: 0;
