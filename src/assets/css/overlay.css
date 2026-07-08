@@ -1,5 +1,4 @@
 .overlay {
-  content: '';
   position: fixed;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
@@ -9,8 +8,8 @@
   align-items: center;
   justify-content: center;
   z-index: 100;
-  inset: 0;
   animation: fadeIn 0.3s ease;
+  inset: 80px 0 0 0;
 }
 
 .overlay.fade-out {

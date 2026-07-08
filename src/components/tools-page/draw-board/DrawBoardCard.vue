@@ -13,7 +13,7 @@
   <div class="draw-board-card card" @click="openDrawBoard()">
     <div class="card-header">
         <h3 class="title">Canvas 画板</h3>
-        <p class="draw-label label">在这里你可以自由绘画，创作属于你的艺术作品</p>
+        <p class="draw-label label">在这里你可以自由绘画，一个基于canvas的画板</p>
     </div>
     <span class="line"></span>
     <div class="card-img">
@@ -22,7 +22,7 @@
   </div>
 </template>
 
-<style>
+<style scroped>
   .draw-board-card {
     display: flex;
     flex-direction: row;

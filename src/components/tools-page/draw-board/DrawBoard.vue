@@ -60,6 +60,10 @@ function eraser() {
   ctx.strokeStyle = 'rgba(0,0,0,1)'
 }
 
+function brush() {
+  ctx.globalCompositeOperation = 'source-over';
+}
+
 onMounted(() => {
   const rect = canvasRef.value.getBoundingClientRect()
   const dpr = window.devicePixelRatio || 1
@@ -91,7 +95,7 @@ onMounted(() => {
         ref="canvasRef"
       ></canvas>
       <div class="toolbar">
-        <button class="draw-button button">画笔</button>
+        <button class="draw-button button" @click="brush()">画笔</button>
         <button class="eraser-button button" @click="eraser">橡皮擦</button>
         <button class="clear-button button" @click="clearBoard()">清空</button>
         <button class="save-button button">保存</button>
@@ -100,7 +104,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style>
+<style scroped>
 
 .overlay.fade-out {
   animation: fadeOut 0.3s ease forwards;

@@ -16,15 +16,18 @@
       <div class="picture-detail grid-container" >
         <img :src="img" alt="wallpaper" v-for="(img,index) in images" :key="index">
       </div>
-      <div class="picture-desc">
-        <p>123</p>
+      <div class="picture-desc"> <!--TODO: 添加卡片点击详情页-->
+        <p> </p>
       </div>
     </div>
   </div>
 
 </template>
 
-<style>
+<style scroped>
+
+ .overlay {
+ }
 
   .picture-detail-card.card {
     transform: none;

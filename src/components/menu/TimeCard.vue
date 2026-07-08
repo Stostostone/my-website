@@ -43,7 +43,7 @@
   </div>
 </template>
 
-<style>
+<style scroped>
   .time-card {
     display: flex;
     flex-direction: column;
