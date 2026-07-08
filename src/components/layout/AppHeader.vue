@@ -1,33 +1,27 @@
 <script setup>
     import { ref } from 'vue'
 
-    const emit = Object['menuSelect']
+    const emit = defineEmits(['page-select'])
 
-    function handleMenuClick() {
-      emit('handleMenuClick');
-    }
-    function handleToolsClick() {
-      emit('handleToolsClick');
-    }
-    function handleAboutClick() {
-      emit('handleAboutClick');
+    function handleNavigationClick(name) {
+      emit('page-select', name);
     }
 
 </script>
 <template>
   <header class="header">
     <div class="header-content">
-      <h1 @click="menuSelect()">石头屋</h1>
+      <h1 @click="handleNavigationClick('menu')">石头屋</h1>
     </div>
     <ul class="switch-button">
-      <li class="menu-button button" @click="handleMenuClick()">主页</li>
-      <li class="tools-button button" @click="handleToolsClick()">工具箱</li>
-      <li class="about-button button" @click="handleAboutClick()">关于我</li>
+      <li class="menu-button button" @click="handleNavigationClick('menu')">主页</li>
+      <li class="tools-button button" @click="handleNavigationClick('tools')">工具箱</li>
+      <li class="about-button button" @click="handleNavigationClick('about')">关于我</li>
     </ul>
   </header>
 </template>
 
-<style scroped>
+<style scoped>
   .header {
     display: flex;
     justify-content: space-between;

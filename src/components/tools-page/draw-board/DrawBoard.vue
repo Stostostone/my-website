@@ -104,7 +104,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style scroped>
+<style scoped>
 
 .overlay.fade-out {
   animation: fadeOut 0.3s ease forwards;

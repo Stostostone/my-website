@@ -50,13 +50,12 @@
     </div>
 </template>
 
-<style scroped>
+<style scoped>
     .weather-card {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        animation: fadeIn 0.4s ease;
         position: relative;
         overflow: hidden;
         cursor: pointer;

@@ -24,7 +24,7 @@
 
 </template>
 
-<style scroped>
+<style scoped>
 
  .overlay {
  }

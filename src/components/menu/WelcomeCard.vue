@@ -31,7 +31,7 @@ const steam = ref("https://store.steampowered.com")
     </div>
 </template>
 
-<style scroped>
+<style scoped>
     p {
         padding: 4px 0;
     }

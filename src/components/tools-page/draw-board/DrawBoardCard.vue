@@ -22,7 +22,7 @@
   </div>
 </template>
 
-<style scroped>
+<style scoped>
   .draw-board-card {
     display: flex;
     flex-direction: row;

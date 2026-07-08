@@ -48,7 +48,7 @@
   </div>
 </template>
 
-<style scroped>
+<style scoped>
   .drop {
     width: 500px;
     height: 500px;

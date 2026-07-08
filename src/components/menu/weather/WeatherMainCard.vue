@@ -101,7 +101,7 @@
 
 </template>
 
-<style scroped>
+<style scoped>
   .weather-main-card {
     position: relative;
 
